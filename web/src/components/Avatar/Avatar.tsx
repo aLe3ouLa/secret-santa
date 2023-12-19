@@ -22,24 +22,32 @@ const Avatar = ({
     <div className="relative inline-block">
       {avatar && (
         <img
-          className="h-18 w-18 border-avatar rounded-full border-white bg-center"
+          className="h-18 w-18 rounded-full border-avatar border-white object-cover"
           src={avatar}
           alt={alt}
         />
       )}
+
       {letter && !avatar && (
-        <p className="center h-18 w-18 border-avatar rounded-full border-white bg-spanishGreen text-2xl font-bold uppercase text-white">
-          {letter}
-        </p>
+        <span className="center h-18 w-18 rounded-full border-avatar border-white bg-spanishGreen">
+          <p className="text-2xl font-bold uppercase text-white">{letter}</p>
+        </span>
       )}
-      {icon && !letter && !avatar && <Icon id={icon} size={32} />}
+
+      {icon && !letter && !avatar && (
+        <span className="center h-18 w-18 rounded-full border-avatar border-vistaBlue bg-spanishGreen text-white">
+          <Icon id={icon} size={32} />
+        </span>
+      )}
+
       {isSantaHatShowing && (
         <img
           src="/images/santa-hat.png"
           alt="Santa Hat"
-          className="absolute -right-[15px] -top-[19px]"
+          className="absolute -right-[15px] -top-[18px]"
         />
       )}
+
       {indicator && <Indicator status={indicator} />}
     </div>
   )

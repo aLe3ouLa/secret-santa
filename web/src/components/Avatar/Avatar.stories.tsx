@@ -28,3 +28,22 @@ export const Primary: Story = {
     indicator: 'success',
   },
 }
+
+export const Letter: Story = {
+  args: {
+    letter: 'A',
+  },
+}
+
+export const IconButton: Story = {
+  args: {
+    icon: 'eyeClosed',
+  },
+}
+
+export const IconButtonWithSantaHat: Story = {
+  args: {
+    icon: 'eyeClosed',
+    isSantaHatShowing: true,
+  },
+}
