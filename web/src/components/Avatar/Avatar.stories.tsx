@@ -47,3 +47,32 @@ export const IconButtonWithSantaHat: Story = {
     isSantaHatShowing: true,
   },
 }
+
+export const AvatarWithSuccess: Story = {
+  args: {
+    avatar: 'images/avatar-01.png',
+    indicator: 'success',
+  },
+}
+
+export const AvatarWithWarning: Story = {
+  args: {
+    avatar: 'images/avatar-01.png',
+    indicator: 'warning',
+  },
+}
+
+export const AvatarWithError: Story = {
+  args: {
+    avatar: 'images/avatar-01.png',
+    indicator: 'error',
+  },
+}
+
+export const AvatarWithErrorAndHat: Story = {
+  args: {
+    avatar: 'images/avatar-01.png',
+    indicator: 'error',
+    isSantaHatShowing: true,
+  },
+}

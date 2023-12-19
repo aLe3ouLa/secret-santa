@@ -21,7 +21,13 @@
  }
 
  @layer components {
+  .indicator {
+    @apply center rounded-full border-2
+  }
 
+  .avatar {
+    @apply h-18 w-18 rounded-full border-avatar
+  }
  }
 
  @layer utilities {

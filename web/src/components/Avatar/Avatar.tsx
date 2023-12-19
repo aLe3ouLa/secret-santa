@@ -22,20 +22,20 @@ const Avatar = ({
     <div className="relative inline-block">
       {avatar && (
         <img
-          className="h-18 w-18 rounded-full border-avatar border-white object-cover"
+          className="avatar border-white object-cover"
           src={avatar}
           alt={alt}
         />
       )}
 
       {letter && !avatar && (
-        <span className="center h-18 w-18 rounded-full border-avatar border-white bg-spanishGreen">
+        <span className="center avatar border-white bg-spanishGreen">
           <p className="text-2xl font-bold uppercase text-white">{letter}</p>
         </span>
       )}
 
       {icon && !letter && !avatar && (
-        <span className="center h-18 w-18 rounded-full border-avatar border-vistaBlue bg-spanishGreen text-white">
+        <span className="center avatar border-vistaBlue bg-spanishGreen text-white">
           <Icon id={icon} size={32} />
         </span>
       )}
@@ -48,7 +48,11 @@ const Avatar = ({
         />
       )}
 
-      {indicator && <Indicator status={indicator} />}
+      {indicator && (
+        <div className="absolute bottom-0 right-0">
+          <Indicator status={indicator} />
+        </div>
+      )}
     </div>
   )
 }

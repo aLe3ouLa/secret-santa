@@ -28,9 +28,11 @@ module.exports = {
       script: ['Agbalumo', 'cursive'],
     },
     height: {
+      6: '20px',
       18: '72px',
     },
     width: {
+      6: '20px',
       18: '72px',
     },
   },

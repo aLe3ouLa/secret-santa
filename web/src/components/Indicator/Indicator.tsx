@@ -6,17 +6,21 @@ type IndicatorProps = {
 
 const Indicator = ({ status }: IndicatorProps) => {
   return (
-    <div className="h-8 w-8 absolute -bottom-2 -right-2 rounded-full border-4 border-white ">
+    <div>
       {status === 'success' && (
-        <span className="center rounded-full bg-spanishGreen">
-          <Icon id="check" size={24} />
+        <span className="indicator h-6 w-6 border-white bg-spanishGreen text-white">
+          <Icon id="check" size={16} />
         </span>
       )}
       {status === 'warning' && (
-        <span className="center h-full w-full block rounded-full " />
+        <span className="indicator h-6 w-6 border-white bg-supernova text-white">
+          <Icon id="question" size={16} />
+        </span>
       )}
       {status === 'error' && (
-        <span className="center h-full w-full block rounded-full " />
+        <span className="indicator h-6 w-6 border-white bg-orangeRed text-white">
+          <Icon id="minus" size={16} />
+        </span>
       )}
     </div>
   )
