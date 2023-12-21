@@ -19,6 +19,7 @@ module.exports = {
         blackPearl: '#071126' /* navy blue */,
         pastelMagenta: '#ff9dbf' /* pink */,
         vistaBlue: '#94d1b4',
+        fireEngineRed: '#c52424',
       },
     },
     fontFamily: {

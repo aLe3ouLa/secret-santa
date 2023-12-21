@@ -14,24 +14,55 @@
  * END --- SETUP TAILWINDCSS EDIT
  */
 
- @layer base {
- svg {
-  @apply fill-current
- }
- }
+@layer base {
+  label {
+    @apply font-handwriting text-xl uppercase tracking-tighter;
+  }
 
- @layer components {
+  label:has(+ input:placeholder-shown) {
+    @apply pointer-events-none absolute left-8 top-8 text-3xl transition-all duration-500;
+  }
+
+  label:has(+ input:focus),
+  label:has(+ input) {
+    @apply absolute left-2 top-2 text-xl  transition-all duration-75;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='url'],
+  input[type='number'],
+  input[type='tel'] {
+    @apply h-[100px] min-w-full max-w-full border-2 border-black px-7 font-sans text-2xl;
+  }
+
+  /* invalid label */
+  label:has(+ input:invalid:not(:placeholder-shown)) {
+    @apply text-white;
+  }
+
+  input:invalid:not(:placeholder-shown) {
+    @apply bg-orangeRed border-fireEngineRed;
+  }
+
+  svg {
+    @apply fill-current;
+  }
+}
+
+@layer components {
   .indicator {
-    @apply center rounded-full border-2
+    @apply center rounded-full border-2;
   }
 
   .avatar {
-    @apply h-18 w-18 rounded-full border-avatar
+    @apply h-18 w-18 rounded-full border-avatar;
   }
- }
+}
 
- @layer utilities {
+@layer utilities {
   .center {
-    @apply flex justify-center items-center
+    @apply flex items-center justify-center;
   }
- }
+}
