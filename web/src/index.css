@@ -64,6 +64,10 @@
   .avatar {
     @apply h-18 w-18 rounded-full border-avatar;
   }
+
+  .line {
+    @apply w-12 h-[3px] bg-black
+  }
 }
 
 @layer utilities {
