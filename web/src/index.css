@@ -68,6 +68,22 @@
   .line {
     @apply w-12 h-[3px] bg-black
   }
+
+  .top-nav li {
+    @apply font-condensed tracking-wide text-[72px] uppercase leading-none
+  }
+
+  .top-nav li a {
+    @apply hover:text-orangeRed
+  }
+
+  .bottom-nav {
+    @apply flex flex-col gap-3
+  }
+
+  .bottom-nav a {
+    @apply hover:text-orangeRed
+  }
 }
 
 @layer utilities {
